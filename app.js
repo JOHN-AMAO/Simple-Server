@@ -2,11 +2,19 @@ let express = require("express");
 let app = express();
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/EduFord/index.html");
+  res.send("HI");
 });
-app.use(express.static("./EduFord"));
+app.get("/api/:id/:id2", (req, res) => {
+  console.log(req.params);
+  res.json("Hey John");
+});
 
-app.listen(5000, (error) => {
+app.get("/ap/v1/query", (req, res) => {
+  console.log(req.query);
+  res.send("Hello world");
+});
+
+app.listen(8000, (error) => {
   if (error) {
     console.log(error);
   } else {
