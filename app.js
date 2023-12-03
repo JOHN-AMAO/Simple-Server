@@ -5,10 +5,10 @@ app.get("/", (req, res) => {
   res.send("This is the homepage");
 });
 
-app.get("/api/:name/:id", (req, res) => {
-  const name = req.params.name;
-  const id = req.params.id;
-  res.send(`user information: name : ${name} id:${id}`);
+app.get("/search", (req, res) => {
+  const query = req.query.query;
+  const categories = req.query.categories;
+  res.send(`This search page ${query}  : ${categories} `);
 });
 
 app.listen(8000, (error) => {
