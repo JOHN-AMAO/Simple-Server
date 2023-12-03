@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "My first nice server",
+  "main": "app.js",
+  "scripts": {
+    "test": "start",
+    "dev": "nodemon app.js"
+  },
+  "author": "John amao",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}
